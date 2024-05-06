@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #b5e6b6;
+    background-image: url("in.jpg");
+    background-size: 1365px 850px;
+    background-repeat: repeat;
+    display: flex;
+}
+
+.logo {
+    width: 104px;
+    height: 62px;
+    margin-top: 20px;
+    margin-left: 16px;
+    z-index: -1;
+    display: inline-block;
+}
+
+p {
+    width: 687px;
+    height: 200px;
+    color: rgb(51, 71, 88);
+    margin-left: -74px;
+    margin-top: 190px;
+}
+
+.nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.nav .btn {
+    background-color: #ffa500;
+    /* Orange color for button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.nav .btn:hover {
+    background-color: #ff7f00;
+    /* Darker shade of orange on hover */
+}

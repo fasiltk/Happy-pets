@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #66a08a;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -83px;
+}
+
+.register {
+  background-color: #327058;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+li {
+  font-size: small;
+  color: rgb(145, 45, 45);
+}
+
+.register h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.register form {
+  margin-top: 20px;
+}
+
+.register input[type="text"],
+.register input[type="password"],
+.register input[type="email"],
+.register input[type="number"],
+.register select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #66a08a;
+  color: black;
+}
+
+.register select {
+  height: 40px;
+}
+
+.register input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #1c5a42;
+  border: none;
+  border-radius: 5px;
+  color: #130404;
+  cursor: pointer;
+}
+
+.register input[type="submit"]:hover {
+  background-color: #0a412c;
+}
+
+::placeholder {
+  color: black;
+}
+
+.logo {
+  width: 104px;
+  height: 62px;
+  margin-top: 20px;
+  margin-left: 16px;
+  z-index: -1;
+  display: inline-block;
+}

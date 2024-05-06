@@ -1,0 +1,77 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: #66a08a;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  width: 104px;
+  height: 62px;
+  margin-top: 20px;
+  margin-left: 16px;
+  z-index: -1;
+  display: inline-block;
+}
+
+.nav .btn {
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.nav .btn:hover {
+  background-color: #ff7f00;
+}
+
+.nav {
+  margin-left: 1051px;
+  margin-top: -62px;
+}
+
+.container {
+  display: flex;
+  background-color: #66a08a;
+  width: 81%;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.chatboxreceiver {
+  background-color: #adeef3;
+  width: 45%;
+  border-radius: 10px;
+  height: 475px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.chatboxsender {
+  background-color: #d3a4cd;
+  width: 45%;
+  margin-left: 60px;
+  margin-right: 10px;
+  border-radius: 10px;
+  height: 475px;
+  overflow: auto;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.loginbutton {
+  background-color: #ad72a6;
+  border-color: #ad72a6;
+  box-shadow: none;
+  border-radius: 5px;
+}

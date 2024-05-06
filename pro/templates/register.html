@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register</title>
+    <script src="{% static 'js/register.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+  </head>
+  <body>
+    <div>
+      <img src="../static/css/logo.png" alt="logo" class="logo" />
+    </div>
+    <div class="container">
+      <div class="register">
+        <u><h2>Register</h2></u>
+        <form action="/register/" method="post">
+          {% csrf_token %}
+          <input type="email" placeholder="Email,username" id="username" required name="username" /> <br />
+          <input type="password" placeholder="Password" id="password" required name="password" /> <br />
+          <input type="password" placeholder="Confirm Password" id="confirmPassword" required /> <br />
+          <input type="text" placeholder="Name" id="name" name="name" /> <br />
+          <input type="number" placeholder="Phone number" id="phonenumber" name="phonenumber" /> <br />
+          <select name="role">
+            <option selected id="selected_gender">Select your role</option>
+            <option value="customer">Customer</option>
+            <option value="manager">Manager</option>
+          </select> <br />
+          <input class="btn btn-primary" type="submit" value="Register" id="submit" /> <br />
+        </form>
+        <ul>
+          <li>Password must 8 or more characters</li>
+          <li>It contain small letter and capital letter</li>
+          <li>Use special characters</li>
+          <li>Use numbers</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

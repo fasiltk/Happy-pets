@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/customer.css' %}" />
+    <script src="{% static 'js/customer.js' %}"></script>
+  </head>
+  <body>
+    <div class="div_logo">
+      <img src="../static/css/logo.png" alt="logo" class="logo" />
+    </div>
+
+    <div class="nav">
+      <a href="{% url 'confirm_view' %}"><button class="btn">Adopt</button></a>
+      <a href="{% url 'chat' %}"><button class="btn">Chat</button></a>
+      <a href="{% url 'logout_view' %}"><button class="btn">Logout</button></a>
+    </div>
+    <div class="cards">
+      {% for a in a %}
+        <div class="card" style="width: 18rem;">
+          <img src="{{ a.image.url }}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{ a.pet_name }}</h5>
+            <p class="card-text">{{ a.description }}</p>
+            <a href="/cart/{{ a.id }}"><button class="btn btn-primary">Adopt</button></a>
+            <a href="/detail/{{ a.id }}"><button class="view">View</button></a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

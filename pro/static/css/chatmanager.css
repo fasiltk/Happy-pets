@@ -1,0 +1,88 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: #66a08a;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  width: 104px;
+  height: 62px;
+  margin-top: 20px;
+  margin-left: 16px;
+  z-index: -1;
+  display: inline-block;
+}
+
+.nav .btn {
+  background-color: #ffa500;
+  /* Orange color for button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.nav .btn:hover {
+  background-color: #ff7f00;
+  /* Darker shade of orange on hover */
+}
+
+.nav {
+  margin-left: 960px;
+  margin-top: -62px;
+}
+
+table {
+  background-color: #aed6c7;
+}
+
+.container {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.chatbox {
+  height: 500px;
+  width: 600px;
+  overflow: auto;
+  margin-left: 200px;
+  border-radius: 20px;
+
+}
+
+.username {
+  width: 190px
+}
+
+input[type="text"] {
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #66a08a;
+  border-radius: 5px;
+  background-color: #aed6c7;
+}
+
+.chat {
+  background-color: #54977f;
+  height: 150px;
+  border-radius: 20px;
+  padding-top: 20px;
+}
+
+input[type="submit"] {
+  width: 64px;
+  height: 22px;
+  margin-left: 82px;
+  background-color: #2b6d56;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+}

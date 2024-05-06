@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Page</title>
+    <link rel="stylesheet" href="{% static 'css/upload.css' %}" />
+  </head>
+  <body>
+    <div>
+      <img src="../static/css/logo.png" alt="logo" class="logo" />
+    </div>
+    <div class="nav">
+      <a href="{% url 'manager' %}"><button class="btn">Home</button></a>
+      <a href="{% url 'cart_view' %}"><button class="btn">Cart</button></a>
+      <a href="{% url 'chatmanager' %}"><button class="btn">Chat</button></a>
+      <a href="{% url 'logout_view' %}"><button class="btn">Logout</button></a>
+    </div>
+    <div class="container">
+      <div class="login-box">
+        <u><h1>Upload</h1></u>
+        <form action="/upload/" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="text" placeholder="Pet name" id="pet_name" required name="pet_name" /> <br />
+          <input type="text" placeholder="Description" id="description" required name="description" /> <br />
+          <input type="text" placeholder="Age" id="age" required name="age" /> <br />
+          <input type="text" placeholder="Price" id="price" required name="price" /> <br />
+          <input type="text" placeholder="Food" id="food" required name="food" /> <br />
+          <input type="text" placeholder="Medical conditions" id="medical" required name="medical" /> <br />
+          <input type="file" id="image" required name="image" /> <br />
+          <input type="submit" class="login-button" value="Upload" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

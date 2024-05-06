@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  </head>
+  <body>
+    <div>
+      <img src="../static/css/logo.png" alt="logo" class="logo" />
+    </div>
+    <div class="nav">
+      <a href="{% url 'user_login' %}"><button class="btn">Login</button></a>
+      <a href="{% url 'register' %}"><button class="btn">Register</button></a>
+    </div>
+    <div class="content">
+      <p>Pets play a significant role in our lives, offering companionship, joy, and sometimes even healing. They provide unconditional love, companionship, and emotional support, especially during challenging times. Pets, whether dogs, cats, or other animals, can help reduce stress, anxiety, and depression. Moreover, adopting a pet from a shelter not only gives them a second chance at a happy life but also enriches our own lives with their presence. It's a mutually beneficial relationship that fosters love, responsibility, and empathy. So, consider adopting a pet and experience the profound impact they can have on your life.</p>
+    </div>
+  </body>
+</html>

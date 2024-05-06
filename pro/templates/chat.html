@@ -1,0 +1,55 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat Page</title>
+  <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+
+</head>
+
+<body>
+  <div class="div_logo">
+    <img src="../static/css/logo.png" alt="logo" class="logo">
+  </div>
+  <div class="nav">
+    <a href="{%url 'customer'%}"><button class="btn">Home</button></a>
+    <a href="{%url 'confirm_view'%}"><button class="btn">Adopt</button></a>
+    <a href="{%url 'logout_view'%}"><button class="btn">Logout</button></a>
+  </div>
+
+  <div class="container">
+    <div class="chatboxsender">
+      <h4>{{ name }}</h4>
+      <ul>
+        {% for message in a %}
+        {% if message.usr == username %}
+        <li>{{ message.message }}</li>
+        <hr>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      <form action="{%url 'chat'%}" method="post">
+        {% csrf_token %}
+        <input type="text" name="message">
+        <input type="submit" class="loginbutton" value="sent">
+      </form>
+
+    </div>
+    <div class="chatboxreceiver">
+      <h4>Agent</h4>
+      <ul>
+        {% for message in b %}
+        {% if message.usruser == username %}
+        <li>{{ message.message }}</li>
+        <hr>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
